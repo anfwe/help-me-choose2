@@ -7,15 +7,29 @@
 </head>
 <body>
   <h1>Help me choose between...</h1>
-  <div>
-    <div>
-      <img src="https://thenypost.files.wordpress.com/2017/04/new-york.jpg?quality=90&strip=all&w=1200">
+  <img src="https://thenypost.files.wordpress.com/2017/04/new-york.jpg?quality=90&strip=all&w=1200">
+  <div class="inputSection">
+    <div class="inputs">
 <div>
   <input placeholder="Something"></input>
 </div>
     </div>
-    <button>Add</button>
+    <button class="addOption">Add</button>
   </div>
+  <div class="resultSection"></div>
   <button>Go!</button>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+  $(function(){
+    $('.resultSection').hide()
+
+    var add_option = function(){
+      $('.inputs').append('<input></input>')
+    }
+
+    $('.addOption').click(add_option)
+  })
+  </script>
 </body>
 </html>
